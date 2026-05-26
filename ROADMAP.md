@@ -3,14 +3,14 @@
 ## v0.1 — Schema foundation (current)
 
 - [x] Monorepo scaffold (pnpm + Turborepo)
-- [ ] `@decko/core`: all 10 block type Zod schemas
-- [ ] `@decko/core`: Deck, Slide, Meta schemas
-- [ ] `@decko/core`: Template, Theme schemas
-- [ ] `@decko/core`: BlockRegistry, TemplateRegistry
-- [ ] `@decko/core`: 22 built-in template definitions
-- [ ] `@decko/core`: `validateDeck()`, `validateContent()`
-- [ ] `@decko/core`: `parseGenerationStream()` SSE utility
-- [ ] `@decko/core`: `deck.schema.json` build artifact
+- [ ] `@deckohq/core`: all 10 block type Zod schemas
+- [ ] `@deckohq/core`: Deck, Slide, Meta schemas
+- [ ] `@deckohq/core`: Template, Theme schemas
+- [ ] `@deckohq/core`: BlockRegistry, TemplateRegistry
+- [ ] `@deckohq/core`: 22 built-in template definitions
+- [ ] `@deckohq/core`: `validateDeck()`, `validateContent()`
+- [ ] `@deckohq/core`: `parseGenerationStream()` SSE utility
+- [ ] `@deckohq/core`: `deck.schema.json` build artifact
 
 ## v0.2 — Renderer
 

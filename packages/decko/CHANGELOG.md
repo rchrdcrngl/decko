@@ -9,4 +9,4 @@
 ### Patch Changes
 
 - Updated dependencies [c604925]
-  - @decko/core@0.2.0
+  - @deckohq/core@0.2.0

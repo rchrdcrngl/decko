@@ -29,9 +29,9 @@ body:
     attributes:
       label: Area
       options:
-        - "@decko/core schema"
-        - "@decko/core registry"
-        - "@decko/core templates"
+        - "@deckohq/core schema"
+        - "@deckohq/core registry"
+        - "@deckohq/core templates"
         - "decko renderer"
         - "decko browser runtime"
         - "decko CLI"

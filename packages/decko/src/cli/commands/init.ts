@@ -615,7 +615,7 @@ const STARTER_DECK = {
           language: 'typescript',
           display: 'block',
           filename: 'generate-deck.ts',
-          code: `import { Decko } from '@decko/sdk'
+          code: `import { Decko } from '@deckohq/sdk'
 
 const deck = await Decko.init({
   theme: 'nova',

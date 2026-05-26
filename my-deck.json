@@ -602,7 +602,7 @@
           "language": "typescript",
           "display": "block",
           "filename": "generate-deck.ts",
-          "code": "import { Decko } from '@decko/sdk'\n\nconst deck = await Decko.init({\n  theme: 'nova',\n  data: './q4-review.json',\n})\n\n// Render to HTML with all animations\nawait deck.render({\n  output: 'dist/deck.html',\n  embedAssets: true,\n})\n\n// Export to PDF for sharing\nawait deck.export({\n  format: 'pdf',\n  output: 'dist/deck.pdf',\n})"
+          "code": "import { Decko } from '@deckohq/sdk'\n\nconst deck = await Decko.init({\n  theme: 'nova',\n  data: './q4-review.json',\n})\n\n// Render to HTML with all animations\nawait deck.render({\n  output: 'dist/deck.html',\n  embedAssets: true,\n})\n\n// Export to PDF for sharing\nawait deck.export({\n  format: 'pdf',\n  output: 'dist/deck.pdf',\n})"
         },
         "annotation": {
           "type": "callout",

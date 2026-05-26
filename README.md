@@ -7,7 +7,7 @@ Prompt / content
       ↓
 decko-agent  →  JSON deck (the AST)
       ↓
-@decko/core  →  validated, typed deck
+@deckohq/core  →  validated, typed deck
       ↓
 decko        →  self-contained HTML
 ```
@@ -16,7 +16,7 @@ decko        →  self-contained HTML
 
 | Package | Description |
 |---------|-------------|
-| [`@decko/core`](./packages/decko-core) | Schema, types, Zod validators, template catalog, registries |
+| [`@deckohq/core`](./packages/decko-core) | Schema, types, Zod validators, template catalog, registries |
 | [`decko`](./packages/decko) | HTML renderer, browser runtime, CLI |
 
 ## Quick start
@@ -78,7 +78,7 @@ npm install decko zod
 
 ```typescript
 import { renderDeck } from 'decko'
-import { validateDeck } from '@decko/core'
+import { validateDeck } from '@deckohq/core'
 
 const deck = {
   version: '1',
@@ -189,7 +189,7 @@ Pure HTML generation — no framework. Each block type has a dedicated render fu
 ### Add a custom template
 
 ```typescript
-import { defaultTemplateRegistry } from '@decko/core'
+import { defaultTemplateRegistry } from '@deckohq/core'
 
 defaultTemplateRegistry.register({
   id: 'my-template',
@@ -213,7 +213,7 @@ defaultTemplateRegistry.register({
 ### Add a custom block type
 
 ```typescript
-import { defaultBlockRegistry } from '@decko/core'
+import { defaultBlockRegistry } from '@deckohq/core'
 import { z } from 'zod'
 
 defaultBlockRegistry.register({
@@ -243,7 +243,7 @@ const myTheme = {
 ### Validate content budgets
 
 ```typescript
-import { validateContent, defaultTemplateRegistry } from '@decko/core'
+import { validateContent, defaultTemplateRegistry } from '@deckohq/core'
 
 const violations = validateContent(deck.slides, defaultTemplateRegistry)
 // [{ slideIndex, slotId, blockId, field, actual, max }]

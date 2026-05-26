@@ -1,4 +1,4 @@
-# @decko/core
+# @deckohq/core
 
 ## 0.2.0
 

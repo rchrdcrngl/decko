@@ -35,7 +35,7 @@ packages/
 Publish as `decko-block-{name}` on npm. Use `registerBlock()`:
 
 ```typescript
-import { registerBlock } from '@decko/core'
+import { registerBlock } from '@deckohq/core'
 import { z } from 'zod'
 
 registerBlock({
@@ -54,7 +54,7 @@ See `packages/decko-core/src/registry/block-registry.ts` for the full API.
 Publish as `decko-template-{name}` on npm. Use `registerTemplate()`:
 
 ```typescript
-import { registerTemplate } from '@decko/core'
+import { registerTemplate } from '@deckohq/core'
 
 registerTemplate({
   id: 'my-template',
@@ -84,7 +84,7 @@ registerTemplate({
 Publish as `decko-theme-{name}` on npm. Export a `ThemeDefinition`:
 
 ```typescript
-import type { ThemeDefinition } from '@decko/core'
+import type { ThemeDefinition } from '@deckohq/core'
 
 const myTheme: ThemeDefinition = {
   id: 'my-theme',
@@ -128,7 +128,7 @@ git commit -m "chore: add changeset"
 
 Breaking schema changes (new required fields, renamed fields, removed fields) require:
 1. A new `version` integer in `DeckSchema`
-2. A `migrate(fromVersion, deck)` implementation in `@decko/core`
+2. A `migrate(fromVersion, deck)` implementation in `@deckohq/core`
 3. Updated `SCHEMA.md`
 4. A major version bump in both packages
 
