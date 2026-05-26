@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { ThemeDefinitionSchema } from '@decko/core'
+import { ThemeDefinitionSchema } from '@deckohq/core'
 import { midnightTheme } from '../../src/themes/midnight/index.js'
 
 describe('midnightTheme', () => {

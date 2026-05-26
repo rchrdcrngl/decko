@@ -1,4 +1,4 @@
-import type { XBlock } from '@decko/core'
+import type { XBlock } from '@deckohq/core'
 import { escapeAttr, escapeHtml } from '../utils/escape.js'
 
 export function renderCustomBlock(block: XBlock): string {

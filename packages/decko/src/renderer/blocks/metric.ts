@@ -1,4 +1,4 @@
-import type { MetricBlock } from '@decko/core'
+import type { MetricBlock } from '@deckohq/core'
 import { escapeHtml } from '../utils/escape.js'
 import { renderRichText } from '../rich-text-renderer.js'
 

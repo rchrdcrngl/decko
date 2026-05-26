@@ -1,5 +1,5 @@
 import { Command } from 'commander'
-import { validateDeck } from '@decko/core'
+import { validateDeck } from '@deckohq/core'
 import { readJsonFile } from '../utils/file-io.js'
 import { success, error, dim } from '../utils/output.js'
 

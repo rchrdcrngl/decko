@@ -1,5 +1,5 @@
 {
-  "name": "decko",
+  "name": "@deckohq/decko",
   "version": "0.2.0",
   "description": "JSON-first presentation framework — renderer, CLI, and browser runtime",
   "license": "MIT",
@@ -38,12 +38,15 @@
     "lint": "eslint src tests"
   },
   "dependencies": {
-    "@decko/core": "workspace:*",
+    "@deckohq/core": "workspace:*",
     "chart.js": "^4.5.1",
     "commander": "^12.0.0"
   },
   "peerDependencies": {
     "zod": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

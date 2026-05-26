@@ -2,7 +2,7 @@ import { DeckRuntime } from './runtime.js'
 import { renderSlide } from '../renderer/slide-renderer.js'
 import { animationEngine } from './animation/index.js'
 import { transitionEngine } from './transitions/index.js'
-import type { Deck } from '@decko/core'
+import type { Deck } from '@deckohq/core'
 import type { AnimationPreset, EasingFn } from './animation/engine.js'
 import type { TransitionHandler } from './transitions/engine.js'
 

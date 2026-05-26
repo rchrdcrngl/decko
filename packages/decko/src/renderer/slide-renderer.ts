@@ -1,4 +1,4 @@
-import type { Slide, Block, BlockAnimation, SlotStyle } from '@decko/core'
+import type { Slide, Block, BlockAnimation, SlotStyle } from '@deckohq/core'
 import { renderBlock } from './block-renderer.js'
 import { escapeHtml } from './utils/escape.js'
 

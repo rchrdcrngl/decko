@@ -1,7 +1,7 @@
 import { copyFileSync, mkdirSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { Command } from 'commander'
-import { validateDeck } from '@decko/core'
+import { validateDeck } from '@deckohq/core'
 import { renderDeck } from '../../renderer/index.js'
 import { loadTheme } from '../../themes/index.js'
 import { readJsonFile, writeOutputFile } from '../utils/file-io.js'

@@ -1,4 +1,4 @@
-import type { AnimatableProps } from '@decko/core'
+import type { AnimatableProps } from '@deckohq/core'
 import { getEasing, getEasingTiming, registerEasing, type EasingFn } from './easing.js'
 
 export type { EasingFn }

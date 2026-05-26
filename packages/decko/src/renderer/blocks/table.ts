@@ -1,4 +1,4 @@
-import type { TableBlock } from '@decko/core'
+import type { TableBlock } from '@deckohq/core'
 import { escapeHtml } from '../utils/escape.js'
 import { renderRichText } from '../rich-text-renderer.js'
 

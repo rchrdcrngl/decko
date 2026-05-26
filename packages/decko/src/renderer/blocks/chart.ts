@@ -1,4 +1,4 @@
-import type { ChartBlock } from '@decko/core'
+import type { ChartBlock } from '@deckohq/core'
 import { escapeHtml } from '../utils/escape.js'
 
 export function renderChartBlock(block: ChartBlock): string {

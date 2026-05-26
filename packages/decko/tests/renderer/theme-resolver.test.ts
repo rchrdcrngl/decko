@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { resolveThemeCss } from '../../src/renderer/theme-resolver.js'
-import type { ThemeTokens } from '@decko/core'
+import type { ThemeTokens } from '@deckohq/core'
 
 const baseTokens: ThemeTokens = {
   colorAccent: '#F97316',

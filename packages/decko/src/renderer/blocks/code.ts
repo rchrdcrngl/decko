@@ -1,4 +1,4 @@
-import type { CodeBlock } from '@decko/core'
+import type { CodeBlock } from '@deckohq/core'
 import { escapeHtml } from '../utils/escape.js'
 
 export function renderCodeBlock(block: CodeBlock): string {

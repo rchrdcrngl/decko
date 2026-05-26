@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { readFile, rm, mkdir } from 'node:fs/promises'
-import { validateDeck } from '@decko/core'
+import { validateDeck } from '@deckohq/core'
 import { initCommand } from '../../src/cli/commands/init.js'
 
 let tmpDir: string

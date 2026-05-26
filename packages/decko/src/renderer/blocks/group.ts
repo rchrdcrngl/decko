@@ -1,5 +1,5 @@
-import type { GroupBlock } from '@decko/core'
-import type { Block } from '@decko/core'
+import type { GroupBlock } from '@deckohq/core'
+import type { Block } from '@deckohq/core'
 
 // Forward reference resolved at runtime — avoids circular import with block-renderer
 let _renderBlock: (block: Block) => string

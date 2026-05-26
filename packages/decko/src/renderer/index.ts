@@ -1,4 +1,4 @@
-import type { Deck } from '@decko/core'
+import type { Deck } from '@deckohq/core'
 import { Renderer } from './renderer.js'
 import type { RenderedDeck, RendererOptions } from './renderer.js'
 

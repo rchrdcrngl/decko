@@ -1,4 +1,4 @@
-import type { ThemeDefinition } from '@decko/core'
+import type { ThemeDefinition } from '@deckohq/core'
 
 export const novaTheme: ThemeDefinition = {
   id: 'nova',

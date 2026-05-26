@@ -1,4 +1,4 @@
-import type { Deck, TemplateDefinition, ThemeDefinition } from '@decko/core'
+import type { Deck, TemplateDefinition, ThemeDefinition } from '@deckohq/core'
 import { renderSlide } from './slide-renderer.js'
 import { resolveThemeCss } from './theme-resolver.js'
 import { assembleHtml } from './html-assembler.js'

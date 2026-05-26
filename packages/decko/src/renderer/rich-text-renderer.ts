@@ -1,4 +1,4 @@
-import type { RichText, InlineNode } from '@decko/core'
+import type { RichText, InlineNode } from '@deckohq/core'
 import { escapeHtml, escapeAttr } from './utils/escape.js'
 
 function renderInlineNode(node: InlineNode): string {

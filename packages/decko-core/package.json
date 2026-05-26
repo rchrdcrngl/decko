@@ -1,5 +1,5 @@
 {
-  "name": "@decko/core",
+  "name": "@deckohq/core",
   "version": "0.2.0",
   "description": "Schema, types, Zod validators, template catalog, and registries for Decko",
   "license": "MIT",
@@ -36,6 +36,9 @@
   },
   "peerDependencies": {
     "zod": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

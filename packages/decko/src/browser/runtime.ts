@@ -3,7 +3,7 @@ import { animationEngine } from './animation/index.js'
 import { hydrateCharts } from './chart-runtime.js'
 import { SpeakerNotes } from './speaker-notes.js'
 import type { AmbientRuntime } from './ambient.js'
-import type { BlockAnimation } from '@decko/core'
+import type { BlockAnimation } from '@deckohq/core'
 
 type EventCallback = (data: unknown) => void
 

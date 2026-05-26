@@ -50,7 +50,7 @@ importers:
 
   packages/decko:
     dependencies:
-      '@decko/core':
+      '@deckohq/core':
         specifier: workspace:*
         version: link:../decko-core
       chart.js:

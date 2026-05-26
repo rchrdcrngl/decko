@@ -1,4 +1,4 @@
-import type { Block } from '@decko/core'
+import type { Block } from '@deckohq/core'
 import {
   renderTextBlock,
   renderKineticTextBlock,

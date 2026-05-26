@@ -1,4 +1,4 @@
-import type { ThemeDefinition } from '@decko/core'
+import type { ThemeDefinition } from '@deckohq/core'
 import { midnightTheme } from './midnight/index.js'
 import { kineticTheme } from './kinetic/index.js'
 import { novaTheme } from './nova/index.js'

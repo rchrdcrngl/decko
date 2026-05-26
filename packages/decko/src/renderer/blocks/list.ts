@@ -1,4 +1,4 @@
-import type { ListBlock, ListItem } from '@decko/core'
+import type { ListBlock, ListItem } from '@deckohq/core'
 import { renderRichText } from '../rich-text-renderer.js'
 
 function renderItem(item: ListItem): string {

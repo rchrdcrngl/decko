@@ -1,4 +1,4 @@
-import type { ThemeTokens } from '@decko/core'
+import type { ThemeTokens } from '@deckohq/core'
 
 function camelToKebab(str: string): string {
   return str.replace(/([A-Z])/g, (ch) => `-${ch.toLowerCase()}`)

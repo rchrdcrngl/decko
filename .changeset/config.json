@@ -3,7 +3,7 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [],
-  "linked": [["@decko/core", "decko"]],
+  "linked": [["@deckohq/core", "@deckohq/decko"]],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",

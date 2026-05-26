@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { Renderer, renderDeck } from '../../src/renderer/index.js'
 import { midnightTheme } from '../../src/themes/midnight/index.js'
-import type { Deck } from '@decko/core'
+import type { Deck } from '@deckohq/core'
 
 const fixture: Deck = {
   version: '1',

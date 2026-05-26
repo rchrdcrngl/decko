@@ -1,4 +1,4 @@
-import type { Deck, ThemeDefinition } from '@decko/core'
+import type { Deck, ThemeDefinition } from '@deckohq/core'
 import { escapeHtml } from './utils/escape.js'
 
 export interface AssembleOptions {

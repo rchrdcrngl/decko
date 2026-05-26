@@ -1,4 +1,4 @@
-import type { DividerBlock } from '@decko/core'
+import type { DividerBlock } from '@deckohq/core'
 
 export function renderDividerBlock(block: DividerBlock): string {
   const display = block.display ?? 'line'

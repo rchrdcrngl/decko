@@ -1,4 +1,4 @@
-import type { CalloutBlock } from '@decko/core'
+import type { CalloutBlock } from '@deckohq/core'
 import { renderRichText } from '../rich-text-renderer.js'
 
 export function renderCalloutBlock(block: CalloutBlock): string {

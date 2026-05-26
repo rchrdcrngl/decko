@@ -1,4 +1,4 @@
-import type { MediaBlock } from '@decko/core'
+import type { MediaBlock } from '@deckohq/core'
 import { escapeAttr, escapeHtml } from '../utils/escape.js'
 import { renderRichText } from '../rich-text-renderer.js'
 

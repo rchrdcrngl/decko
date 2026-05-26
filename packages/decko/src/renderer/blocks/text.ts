@@ -1,4 +1,4 @@
-import type { KineticTextBlock, TextBlock } from '@decko/core'
+import type { KineticTextBlock, TextBlock } from '@deckohq/core'
 import { renderRichText } from '../rich-text-renderer.js'
 
 const DISPLAY_TAG: Record<string, string> = {
