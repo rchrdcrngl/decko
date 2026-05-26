@@ -31,10 +31,17 @@ No build step. Drop JSON into HTML, include two files.
 <head>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://unpkg.com/@deckohq/decko@latest/dist/css/decko-base.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@deckohq/decko@latest/dist/css/decko-templates.css" />
   <link rel="stylesheet" href="https://unpkg.com/@deckohq/decko@latest/dist/css/decko-theme-midnight.css" />
 </head>
 <body>
-  <script type="application/json" id="deck">
+  <div id="decko-root" data-aspect-ratio="16:9" data-render-mode="csr"></div>
+  <nav id="decko-nav">
+    <button id="decko-prev">&#8592;</button>
+    <span id="decko-counter"></span>
+    <button id="decko-next">&#8594;</button>
+  </nav>
+  <script id="deck-data" type="application/json">
     {
       "version": "1",
       "meta": { "title": "My Deck" },
