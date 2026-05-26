@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --decko-color-accent:      #818cf8;
+  --decko-color-background:  #07071a;
+  --decko-color-surface:     #0d0d25;
+  --decko-color-text:        #eeeeff;
+  --decko-color-text-muted:  #5e5e8a;
+  --decko-font-display:      Outfit, system-ui, sans-serif;
+  --decko-font-body:         'DM Sans', system-ui, sans-serif;
+  --decko-font-mono:         'JetBrains Mono', monospace;
+  --decko-spacing-slide:     3.75rem;
+  --decko-radius-card:       0.875rem;
+  --decko-motion-intensity:  moderate;
+}

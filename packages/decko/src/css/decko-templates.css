@@ -1,0 +1,349 @@
+/* ── Template Layout Rules ────────────────────────────────────────────────
+   Targets [data-template] and [data-slot] attributes emitted by slide-renderer.
+   Override .decko-slide--active display for grid-based templates.
+   ──────────────────────────────────────────────────────────────────────── */
+
+/* ── Title Slide ──────────────────────────────── */
+[data-template="title-slide"] {
+  align-items: center;
+  text-align: center;
+}
+
+/* ── Header Body ──────────────────────────────── */
+[data-template="header-body"] [data-slot="body"] {
+  flex: 1;
+}
+
+/* ── Single Column ────────────────────────────── */
+[data-template="single-column"] {
+  justify-content: center;
+}
+
+[data-template="single-column"] [data-slot="body"] {
+  flex: 0 1 auto;
+}
+
+/* ── Two Column ───────────────────────────────── */
+[data-template="two-column"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "left  right";
+  gap: 1.75rem var(--decko-spacing-slide, 3rem);
+  height: 100%;
+}
+
+[data-template="two-column"] [data-slot="title"]       { grid-area: title; align-self: end; }
+[data-template="two-column"] [data-slot="left"]        { grid-area: left; align-self: stretch; }
+[data-template="two-column"] [data-slot="right"]       { grid-area: right; align-self: stretch; }
+[data-template="two-column"] [data-slot="left-label"]  { display: none; }
+[data-template="two-column"] [data-slot="right-label"] { display: none; }
+
+/* ── Three Up ─────────────────────────────────── */
+[data-template="three-up"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "title title  title"
+    "col1  col2   col3";
+  gap: 1.75rem 2rem;
+  height: 100%;
+}
+
+[data-template="three-up"] [data-slot="title"]     { grid-area: title; align-self: end; }
+[data-template="three-up"] [data-slot="col-1"]     { grid-area: col1; align-self: stretch; display: flex; flex-direction: column; min-height: 0; }
+[data-template="three-up"] [data-slot="col-2"]     { grid-area: col2; align-self: stretch; display: flex; flex-direction: column; min-height: 0; }
+[data-template="three-up"] [data-slot="col-3"]     { grid-area: col3; align-self: stretch; display: flex; flex-direction: column; min-height: 0; }
+[data-template="three-up"] [data-slot="col-1"] .decko-callout,
+[data-template="three-up"] [data-slot="col-2"] .decko-callout,
+[data-template="three-up"] [data-slot="col-3"] .decko-callout { flex: 1; }
+[data-template="three-up"] [data-slot="col-1-label"],
+[data-template="three-up"] [data-slot="col-2-label"],
+[data-template="three-up"] [data-slot="col-3-label"] { display: none; }
+
+/* ── Bullets Media ────────────────────────────── */
+[data-template="bullets-media"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title   title"
+    "bullets media";
+  gap: 1.5rem var(--decko-spacing-slide, 3rem);
+}
+
+[data-template="bullets-media"] [data-slot="title"]   { grid-area: title; }
+[data-template="bullets-media"] [data-slot="bullets"] { grid-area: bullets; }
+[data-template="bullets-media"] [data-slot="media"]   { grid-area: media; }
+
+/* ── Section Break ────────────────────────────── */
+[data-template="section-break"] {
+  align-items: center;
+  text-align: center;
+}
+
+/* ── Quote ────────────────────────────────────── */
+[data-template="quote"] {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+[data-template="quote"] [data-slot="attribution"] {
+  margin-top: 1rem;
+}
+
+/* ── Closing ──────────────────────────────────── */
+[data-template="closing"] {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ── Agenda ───────────────────────────────────── */
+[data-template="agenda"] {
+  justify-content: center;
+}
+
+[data-template="agenda"] [data-slot="items"] {
+  flex: 0 1 auto;
+}
+
+/* ── Big Metric ───────────────────────────────── */
+[data-template="big-metric"] {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
+}
+
+[data-template="big-metric"] [data-slot="eyebrow"] {
+  margin-bottom: 0.75rem;
+}
+
+[data-template="big-metric"] [data-slot="metric"] {
+  align-items: center;
+}
+
+[data-template="big-metric"] [data-slot="metric"] .decko-metric {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+[data-template="big-metric"] [data-slot="metric"] .decko-metric__value {
+  font-size: clamp(5rem, 14vw, 9.5rem);
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+[data-template="big-metric"] [data-slot="metric"] .decko-metric__label {
+  font-size: clamp(0.8rem, 1.4vw, 1rem);
+  margin-top: 0.5rem;
+}
+
+[data-template="big-metric"] [data-slot="context"] {
+  margin-top: 1.75rem;
+  max-width: 58ch;
+  opacity: 0.6;
+}
+
+/* ── Chart Callout ────────────────────────────── */
+[data-template="chart-callout"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "title   title"
+    "chart   callout";
+  gap: 1.75rem var(--decko-spacing-slide, 3rem);
+  height: 100%;
+}
+
+[data-template="chart-callout"] [data-slot="title"]   { grid-area: title; align-self: end; }
+[data-template="chart-callout"] [data-slot="chart"]   { grid-area: chart; align-self: stretch; }
+[data-template="chart-callout"] [data-slot="callout"] { grid-area: callout; align-self: start; }
+
+/* ── Metric Trio ──────────────────────────────── */
+[data-template="metric-trio"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "title title title"
+    "m1    m2    m3";
+  gap: 2rem var(--decko-spacing-slide, 3rem);
+  height: 100%;
+}
+
+[data-template="metric-trio"] [data-slot="title"]    { grid-area: title; align-self: end; }
+[data-template="metric-trio"] [data-slot="metric-1"] { grid-area: m1; text-align: center; align-self: stretch; justify-content: center; }
+[data-template="metric-trio"] [data-slot="metric-2"] { grid-area: m2; text-align: center; align-self: stretch; justify-content: center; }
+[data-template="metric-trio"] [data-slot="metric-3"] { grid-area: m3; text-align: center; align-self: stretch; justify-content: center; }
+
+[data-template="metric-trio"] [data-slot^="metric-"] .decko-metric {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ── Table Slide ──────────────────────────────── */
+[data-template="table-slide"] {
+  justify-content: flex-start;
+}
+
+[data-template="table-slide"] [data-slot="table"] {
+  flex: 1;
+  overflow: auto;
+}
+
+/* ── Full Bleed Media ─────────────────────────── */
+[data-template="full-bleed-media"] {
+  padding: 0;
+  justify-content: flex-end;
+}
+
+[data-template="full-bleed-media"] [data-slot="media"] {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+[data-template="full-bleed-media"] [data-slot="media"] img,
+[data-template="full-bleed-media"] [data-slot="media"] video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+[data-template="full-bleed-media"] [data-slot="overlay-text"],
+[data-template="full-bleed-media"] [data-slot="caption"] {
+  position: relative;
+  z-index: 1;
+}
+
+[data-template="full-bleed-media"] [data-slot="overlay-text"] {
+  padding: 0 var(--decko-spacing-slide, 3rem) 0.5rem;
+}
+
+[data-template="full-bleed-media"] [data-slot="caption"] {
+  padding: 0 var(--decko-spacing-slide, 3rem) var(--decko-spacing-slide, 3rem);
+  opacity: 0.65;
+}
+
+[data-template="full-bleed-media"]::after {
+  content: '';
+  position: absolute;
+  inset: 40% 0 0 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(7, 7, 26, 0.55) 50%,
+    rgba(7, 7, 26, 0.88) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Media Caption ────────────────────────────── */
+[data-template="media-caption"] {
+  align-items: center;
+  justify-content: center;
+}
+
+[data-template="media-caption"] [data-slot="caption"] {
+  text-align: center;
+}
+
+/* ── Comparison ───────────────────────────────── */
+[data-template="comparison"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title  title"
+    "before after";
+  gap: 1.5rem var(--decko-spacing-slide, 3rem);
+}
+
+[data-template="comparison"] [data-slot="title"]  { grid-area: title; }
+[data-template="comparison"] [data-slot="before"] { grid-area: before; }
+[data-template="comparison"] [data-slot="after"]  { grid-area: after; }
+
+/* ── Image Grid ───────────────────────────────── */
+[data-template="image-grid"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+
+[data-template="image-grid"] [data-slot="title"] {
+  grid-row: 1;
+}
+
+[data-template="image-grid"] [data-slot="image-1"],
+[data-template="image-grid"] [data-slot="image-2"],
+[data-template="image-grid"] [data-slot="image-3"],
+[data-template="image-grid"] [data-slot="image-4"] {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: 0.75rem;
+}
+
+/* ── Architecture Diagram ─────────────────────── */
+[data-template="architecture-diagram"] {
+  padding: 1rem;
+}
+
+[data-template="architecture-diagram"] [data-slot="diagram"] {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Code Walkthrough ─────────────────────────── */
+[data-template="code-walkthrough"].decko-slide--active {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    "title title"
+    "code  notes";
+  gap: 1.5rem var(--decko-spacing-slide, 3rem);
+}
+
+[data-template="code-walkthrough"] [data-slot="title"] { grid-area: title; }
+[data-template="code-walkthrough"] [data-slot="code"]  { grid-area: code; overflow: auto; }
+[data-template="code-walkthrough"] [data-slot="notes"] { grid-area: notes; }
+
+/* ── Terminal ─────────────────────────────────── */
+[data-template="terminal"] {
+  justify-content: flex-start;
+  font-family: var(--decko-font-mono, monospace);
+}
+
+[data-template="terminal"] [data-slot="output"] {
+  flex: 1;
+  overflow: auto;
+}
+
+/* ── Slot enter animation overrides ───────────────────────────────────────── */
+[data-template="title-slide"]   { --decko-slot-enter-duration: 600ms; }
+[data-template="section-break"] { --decko-slot-enter-duration: 500ms; }
+[data-template="closing"]       { --decko-slot-enter-duration: 600ms; }
+
+/* Grid templates: all slots animate simultaneously */
+[data-template="two-column"]   .decko-slot--enter,
+[data-template="three-up"]     .decko-slot--enter,
+[data-template="comparison"]   .decko-slot--enter,
+[data-template="metric-trio"]  .decko-slot--enter,
+[data-template="image-grid"]   .decko-slot--enter { animation-delay: 150ms !important; }

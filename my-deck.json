@@ -1,0 +1,680 @@
+{
+  "version": "1",
+  "meta": {
+    "title": "Q4 2025 Business Review",
+    "author": "Your Name",
+    "aspectRatio": "16:9",
+    "language": "en"
+  },
+  "theme": { "name": "nova" },
+  "slides": [
+    {
+      "templateId": "kinetic-hero",
+      "transition": { "type": "fade", "duration": 800 },
+      "background": { "type": "color", "value": "#ffffff" },
+      "notes": "Opening kinetic hero — let the animation play fully before speaking. Sets the visual tone.",
+      "slotStyles": {
+        "ghost-bg": { "position": "absolute", "top": "50%", "left": "50%" },
+        "word-top": { "position": "absolute", "top": "16%", "left": "5%" },
+        "label-top": { "position": "absolute", "top": "12%", "right": "6%" },
+        "word-mid": { "position": "absolute", "top": "38%", "left": "46%" },
+        "label-bottom": { "position": "absolute", "bottom": "28%", "right": "8%" },
+        "word-bottom": { "position": "absolute", "bottom": "10%", "left": "3%" },
+        "tagline": { "position": "absolute", "bottom": "4%", "right": "5%" }
+      },
+      "slots": {
+        "ghost-bg": {
+          "type": "text-kinetic",
+          "content": "FUTURE",
+          "ghost": true,
+          "fontSize": "clamp(180px,30vw,440px)"
+        },
+        "word-top": {
+          "type": "text-kinetic",
+          "content": "BUILD",
+          "fontSize": "clamp(80px,14vw,200px)",
+          "animation": { "preset": "blast-from-z", "delay": 80 }
+        },
+        "label-top": {
+          "type": "text",
+          "display": "eyebrow",
+          "content": "EST. 2025",
+          "animation": { "preset": "slide-from-right", "delay": 300 }
+        },
+        "word-mid": {
+          "type": "text-kinetic",
+          "content": "THE",
+          "fontSize": "clamp(100px,18vw,260px)",
+          "animation": { "preset": "elastic-up", "delay": 500 }
+        },
+        "word-bottom": {
+          "type": "text-kinetic",
+          "content": "FUTURE",
+          "color": "#e8f400",
+          "fontSize": "clamp(90px,15vw,220px)",
+          "animation": { "preset": "elastic-up", "delay": 900 }
+        },
+        "label-bottom": {
+          "type": "text",
+          "display": "eyebrow",
+          "content": "A new era begins",
+          "animation": { "preset": "fade-in", "delay": 700 }
+        },
+        "tagline": {
+          "type": "text",
+          "display": "caption",
+          "content": "Q4 2025 · Annual Business Review",
+          "animation": { "preset": "fade-in", "delay": 1400 }
+        }
+      }
+    },
+    {
+      "templateId": "kinetic-canvas",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Kinetic canvas — let the words land, then start talking. This sets up the three themes of the review.",
+      "slotStyles": {
+        "word-1": { "position": "absolute", "top": "8%", "left": "6%" },
+        "word-2": { "position": "absolute", "top": "36%", "left": "10%" },
+        "word-3": { "position": "absolute", "top": "22%", "right": "4%" },
+        "word-4": { "position": "absolute", "bottom": "8%", "left": "6%" },
+        "accent": { "position": "absolute", "top": "50%", "right": "16%" },
+        "caption": { "position": "absolute", "bottom": "5%", "right": "5%" }
+      },
+      "slots": {
+        "word-1": {
+          "type": "text-kinetic",
+          "content": "SHIP",
+          "color": "#f0ece4",
+          "fontSize": "clamp(90px,16vw,240px)",
+          "animation": { "preset": "skew-in-left", "delay": 0 }
+        },
+        "word-2": {
+          "type": "text-kinetic",
+          "content": "learn",
+          "color": "#e8f400",
+          "fontSize": "clamp(18px,3.5vw,52px)",
+          "letterSpacing": "0.22em",
+          "animation": { "preset": "scale-up", "delay": 420 }
+        },
+        "word-3": {
+          "type": "text-kinetic",
+          "content": "GROW",
+          "fontSize": "clamp(80px,14vw,210px)",
+          "color": "#f0ece4",
+          "animation": { "preset": "skew-in-right", "delay": 650 }
+        },
+        "word-4": {
+          "type": "text-kinetic",
+          "content": "REPEAT",
+          "color": "#f0ece4",
+          "fontSize": "clamp(50px,9vw,140px)",
+          "animation": { "preset": "slide-from-bottom", "delay": 1000 }
+        },
+        "accent": {
+          "type": "divider",
+          "animation": { "preset": "pop", "delay": 850 }
+        },
+        "caption": {
+          "type": "text",
+          "display": "caption",
+          "content": "Building the Future of Work · 2025",
+          "animation": { "preset": "fade-in", "delay": 1400 }
+        }
+      }
+    },
+    {
+      "templateId": "title-slide",
+      "transition": { "type": "fade", "duration": 700 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Welcome everyone. This is our Q4 2025 review — cover what we shipped, what we learned, and where we're headed. Keep intro under 60 seconds.",
+      "animations": {
+        "eyebrow": { "preset": "slide-from-right", "delay": 0 },
+        "headline": { "preset": "blast-from-z", "delay": 150 },
+        "subtitle": { "preset": "slide-from-bottom", "delay": 450 }
+      },
+      "slots": {
+        "eyebrow": { "type": "text", "display": "eyebrow", "content": "Annual Business Review · Q4 2025" },
+        "headline": { "type": "text", "display": "heading", "content": "Building the Future of Work" },
+        "subtitle": { "type": "text", "display": "subheading", "content": "Q4 results, product milestones, and 2026 strategy" }
+      }
+    },
+    {
+      "templateId": "agenda",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Walk through the agenda. We have four sections — performance, product, team, and outlook. Total runtime: 30 mins.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "items": { "preset": "slide-from-bottom", "delay": 200 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Today's Agenda" },
+        "items": {
+          "type": "list",
+          "display": "numbered",
+          "items": [
+            { "text": "Q4 Performance — revenue, growth, and key metrics" },
+            { "text": "Product Highlights — what shipped and what landed" },
+            { "text": "Team & Operations — headcount, hiring, and process" },
+            { "text": "2026 Outlook — strategy, bets, and open questions" }
+          ]
+        }
+      }
+    },
+    {
+      "templateId": "section-break",
+      "transition": { "type": "wipe", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "First section: performance. This is the numbers section — stay factual, let the data speak.",
+      "animations": {
+        "label": { "preset": "fade-in", "delay": 0 },
+        "title": { "preset": "elastic-up", "delay": 100 },
+        "description": { "preset": "slide-from-bottom", "delay": 500 }
+      },
+      "slots": {
+        "label": { "type": "text", "display": "eyebrow", "content": "Section 01" },
+        "title": { "type": "text", "display": "heading", "content": "Q4 Performance" },
+        "description": { "type": "text", "display": "subheading", "content": "Revenue, retention, and growth metrics" }
+      }
+    },
+    {
+      "templateId": "metric-trio",
+      "transition": { "type": "fade", "duration": 400 },
+      "background": { "type": "color", "value": "#f0ece4" },
+      "notes": "Three headline numbers. ARR crossed $5M — that's our biggest milestone. NRR at 118% means existing customers are expanding. CAC down 22% — our PLG motion is working.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "metric-1": { "preset": "scale-up", "delay": 150 },
+        "metric-2": { "preset": "scale-up", "delay": 280 },
+        "metric-3": { "preset": "scale-up", "delay": 410 },
+        "footnote": { "preset": "fade-in", "delay": 600 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Q4 Headline Numbers" },
+        "metric-1": { "type": "metric", "display": "kpi", "value": "$5.2M", "label": "Annual Recurring Revenue", "trend": "up", "delta": "+34% YoY" },
+        "metric-2": { "type": "metric", "display": "kpi", "value": "118%", "label": "Net Revenue Retention", "trend": "up", "delta": "+6pp vs Q3" },
+        "metric-3": { "type": "metric", "display": "kpi", "value": "$1,840", "label": "Customer Acq. Cost", "trend": "down", "delta": "−22% QoQ" },
+        "footnote": { "type": "text", "display": "caption", "content": "ARR as of Dec 31 2025. NRR calculated on 12-month cohorts. CAC = blended S&M spend / new logos." }
+      }
+    },
+    {
+      "templateId": "chart-callout",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Revenue has grown every single quarter. Q4 was the strongest at $1.3M — 41% of our full-year number in one quarter. Seasonal effect from enterprise renewal cycles.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "chart": { "preset": "fade-in", "delay": 200 },
+        "callout": { "preset": "slide-from-right", "delay": 400 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Revenue Growth Trajectory" },
+        "chart": {
+          "type": "chart",
+          "chartType": "line",
+          "display": "gradient",
+          "title": "Quarterly Revenue ($K)",
+          "data": {
+            "labels": ["Q1 '24", "Q2 '24", "Q3 '24", "Q4 '24", "Q1 '25", "Q2 '25", "Q3 '25", "Q4 '25"],
+            "datasets": [
+              { "label": "Revenue ($K)", "values": [310, 420, 580, 740, 850, 980, 1140, 1300], "color": "#e8f400" }
+            ]
+          }
+        },
+        "callout": { "type": "metric", "display": "stat-callout", "value": "+76%", "label": "Revenue growth in 2025", "trend": "up", "delta": "vs 2024" }
+      }
+    },
+    {
+      "templateId": "big-metric",
+      "transition": { "type": "wipe", "direction": "up" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Pause here. 94% CSAT is industry-leading — average SaaS is around 78%. Attribute this to the support team and the new onboarding flow we launched in September.",
+      "animations": {
+        "eyebrow": { "preset": "fade-in", "delay": 0 },
+        "metric": { "preset": "blast-from-z", "delay": 150 },
+        "context": { "preset": "slide-from-bottom", "delay": 400 }
+      },
+      "slots": {
+        "eyebrow": { "type": "text", "display": "eyebrow", "content": "Customer Satisfaction" },
+        "metric": { "type": "metric", "display": "kpi", "value": "94%", "label": "CSAT Score — Q4 2025", "trend": "up", "delta": "+8pp YoY" },
+        "context": { "type": "text", "display": "body", "content": "Measured across 3,200 post-interaction surveys. Industry benchmark: 78%. Driven by redesigned onboarding and dedicated success pods launched in September." }
+      }
+    },
+    {
+      "templateId": "section-break",
+      "transition": { "type": "wipe", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Section two: product. This is what the engineering and design teams shipped. Focus on impact, not features.",
+      "animations": {
+        "label": { "preset": "fade-in", "delay": 0 },
+        "title": { "preset": "elastic-up", "delay": 100 },
+        "description": { "preset": "slide-from-bottom", "delay": 500 }
+      },
+      "slots": {
+        "label": { "type": "text", "display": "eyebrow", "content": "Section 02" },
+        "title": { "type": "text", "display": "heading", "content": "Product Highlights" },
+        "description": { "type": "text", "display": "subheading", "content": "What we shipped and what it unlocked" }
+      }
+    },
+    {
+      "templateId": "three-up",
+      "transition": { "type": "fade", "duration": 400 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Three major bets we shipped in Q4. AI Assist is our biggest — 62% of power users are using it weekly. Spend 30 seconds on each pillar.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "col-1-label": { "preset": "fade-in", "delay": 150 },
+        "col-1": { "preset": "drop-in", "delay": 200 },
+        "col-2-label": { "preset": "fade-in", "delay": 300 },
+        "col-2": { "preset": "drop-in", "delay": 350 },
+        "col-3-label": { "preset": "fade-in", "delay": 450 },
+        "col-3": { "preset": "drop-in", "delay": 500 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Three Major Bets Shipped" },
+        "col-1-label": { "type": "text", "display": "eyebrow", "content": "01 · AI" },
+        "col-1": {
+          "type": "callout",
+          "display": "info",
+          "title": "AI Assist",
+          "body": "Smart suggestions across the editor. 62% weekly active usage among power users within 6 weeks of launch."
+        },
+        "col-2-label": { "type": "text", "display": "eyebrow", "content": "02 · Platform" },
+        "col-2": {
+          "type": "callout",
+          "display": "success",
+          "title": "Real-time Collab",
+          "body": "Live cursors, presence, and conflict-free editing. Average session length up 38% for teams using it."
+        },
+        "col-3-label": { "type": "text", "display": "eyebrow", "content": "03 · Growth" },
+        "col-3": {
+          "type": "callout",
+          "display": "warning",
+          "title": "Self-serve Billing",
+          "body": "Full PLG checkout flow. 23% of new MRR in December came through self-serve — up from 0% in Q3."
+        }
+      }
+    },
+    {
+      "templateId": "two-column",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Before/after for the new onboarding. Time-to-value dropped from 11 days to under 2. This is directly correlated with the CSAT lift.",
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Onboarding Redesign Impact" },
+        "left": [
+          { "type": "text", "display": "eyebrow", "content": "Before — Q2 2025" },
+          { "type": "list", "display": "bullets", "items": [
+            { "text": "11-day average time-to-value" },
+            { "text": "43% of trials never reach first key action" },
+            { "text": "Manual setup calls required for 70% of accounts" },
+            { "text": "CSAT at onboarding: 71%" }
+          ]}
+        ],
+        "right": [
+          { "type": "text", "display": "eyebrow", "content": "After — Q4 2025" },
+          { "type": "list", "display": "checklist", "items": [
+            { "text": "1.8-day average time-to-value", "checked": true },
+            { "text": "81% of trials reach first key action", "checked": true },
+            { "text": "Fully self-serve for 94% of accounts", "checked": true },
+            { "text": "CSAT at onboarding: 91%", "checked": true }
+          ]}
+        ]
+      }
+    },
+    {
+      "templateId": "media-caption",
+      "transition": { "type": "fade", "duration": 600 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "This is the new dashboard — designed with our top 10 customers. Point out the AI suggestions panel on the right side.",
+      "animations": {
+        "media": { "preset": "fade-in", "delay": 0 },
+        "caption": { "preset": "slide-from-bottom", "delay": 400 }
+      },
+      "slots": {
+        "media": {
+          "type": "media",
+          "display": "image",
+          "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80",
+          "alt": "New product dashboard screenshot"
+        },
+        "caption": { "type": "text", "display": "caption", "content": "Redesigned with input from 10 enterprise customers — shipped November 2025" }
+      }
+    },
+    {
+      "templateId": "full-bleed-media",
+      "transition": { "type": "fade", "duration": 700 },
+      "notes": "Let this visual breathe. It shows the product in context — real users, real workflows.",
+      "slots": {
+        "media": {
+          "type": "media",
+          "display": "image",
+          "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80",
+          "alt": "Team working on data visualization"
+        },
+        "overlay-text": { "type": "text", "display": "heading", "content": "Built for How Teams Actually Work" },
+        "caption": { "type": "text", "display": "caption", "content": "Used by 1,400+ teams across 38 countries" }
+      }
+    },
+    {
+      "templateId": "image-grid",
+      "transition": { "type": "fade", "duration": 500 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Four product views in one slide — give 5 seconds each. Top-left is the main dashboard, top-right is the analytics panel, bottom-left is mobile, bottom-right is the new collab view.",
+      "animations": {
+        "title": { "preset": "fade-in", "delay": 0 },
+        "image-1": { "preset": "scale-up", "delay": 100 },
+        "image-2": { "preset": "scale-up", "delay": 200 },
+        "image-3": { "preset": "scale-up", "delay": 300 },
+        "image-4": { "preset": "scale-up", "delay": 400 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "eyebrow", "content": "Product · Four Views" },
+        "image-1": { "type": "media", "display": "image", "src": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80", "alt": "Main dashboard" },
+        "image-2": { "type": "media", "display": "image", "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80", "alt": "Analytics panel" },
+        "image-3": { "type": "media", "display": "image", "src": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80", "alt": "Mobile view" },
+        "image-4": { "type": "media", "display": "image", "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80", "alt": "Collaboration view" }
+      }
+    },
+    {
+      "templateId": "comparison",
+      "transition": { "type": "wipe", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Side-by-side of old and new. The improvement is obvious — let the images do the talking.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "left-label": { "preset": "fade-in", "delay": 150 },
+        "left": { "preset": "slide-from-left", "delay": 200 },
+        "right-label": { "preset": "fade-in", "delay": 300 },
+        "right": { "preset": "slide-from-right", "delay": 350 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Before & After" },
+        "left-label": { "type": "text", "display": "eyebrow", "content": "Q2 2025 — Old" },
+        "left": {
+          "type": "list",
+          "display": "bullets",
+          "items": [
+            { "text": "Dense, cluttered layout with no clear hierarchy" },
+            { "text": "11-step onboarding before first value" },
+            { "text": "No collaboration — single-user only" },
+            { "text": "Manual data entry for all configurations" }
+          ]
+        },
+        "right-label": { "type": "text", "display": "eyebrow", "content": "Q4 2025 — New" },
+        "right": {
+          "type": "list",
+          "display": "checklist",
+          "items": [
+            { "text": "Clean progressive disclosure, AI-guided setup", "checked": true },
+            { "text": "Value delivered in under 2 days", "checked": true },
+            { "text": "Real-time collab with live cursors and presence", "checked": true },
+            { "text": "Smart defaults — 94% of accounts fully self-serve", "checked": true }
+          ]
+        }
+      }
+    },
+    {
+      "templateId": "section-break",
+      "transition": { "type": "wipe", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Section three: team and operations. Quick section — headcount, key hires, and one process win.",
+      "animations": {
+        "label": { "preset": "fade-in", "delay": 0 },
+        "title": { "preset": "elastic-up", "delay": 100 },
+        "description": { "preset": "slide-from-bottom", "delay": 500 }
+      },
+      "slots": {
+        "label": { "type": "text", "display": "eyebrow", "content": "Section 03" },
+        "title": { "type": "text", "display": "heading", "content": "Team & Operations" },
+        "description": { "type": "text", "display": "subheading", "content": "How we grew and how we operate" }
+      }
+    },
+    {
+      "templateId": "table-slide",
+      "transition": { "type": "fade", "duration": 400 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Headcount by function. Engineering is still the largest team — intentional. We kept G&A lean. Total headcount: 47, up from 31 at start of year.",
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Team by Function — EOY 2025" },
+        "table": {
+          "type": "table",
+          "display": "striped",
+          "headers": ["Function", "Q4 '24", "Q4 '25", "Change", "Key Hire"],
+          "rows": [
+            ["Engineering", "14", "21", "+7", "VP Engineering (May)"],
+            ["Product & Design", "4", "7", "+3", "Head of Design (Aug)"],
+            ["Sales", "5", "8", "+3", "2× AEs, 1 SDR"],
+            ["Customer Success", "3", "6", "+3", "Head of CS (Sep)"],
+            ["Marketing", "2", "3", "+1", "Growth PM (Nov)"],
+            ["G&A", "3", "2", "−1", "Consolidated ops role"]
+          ],
+          "caption": "FTE only. Does not include 6 contractors on design and QA."
+        },
+        "footnote": { "type": "text", "display": "caption", "content": "Total: 47 FTE as of Dec 31 2025, up from 31 at Jan 1 2025." }
+      }
+    },
+    {
+      "templateId": "quote",
+      "transition": { "type": "fade", "duration": 600 },
+      "background": { "type": "color", "value": "#f0ece4" },
+      "notes": "This is from Lena at Veritas — one of our flagship enterprise customers. She said this unprompted on our QBR call. It captures the product value better than we ever could.",
+      "animations": {
+        "quote": { "preset": "fade-in", "delay": 0 },
+        "attribution": { "preset": "slide-from-bottom", "delay": 500 }
+      },
+      "slots": {
+        "quote": { "type": "text", "display": "quote", "content": "\"Decko cut our deck production time by 70%. More importantly, our presentations finally look like they belong in the same company.\"" },
+        "attribution": { "type": "text", "display": "label", "content": "— Lena Hartmann, Head of Revenue, Veritas Group" }
+      }
+    },
+    {
+      "templateId": "section-break",
+      "transition": { "type": "wipe", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Final section — forward looking. This is where we share our bets for 2026. Frame it as bets, not promises.",
+      "animations": {
+        "label": { "preset": "fade-in", "delay": 0 },
+        "title": { "preset": "elastic-up", "delay": 100 },
+        "description": { "preset": "slide-from-bottom", "delay": 500 }
+      },
+      "slots": {
+        "label": { "type": "text", "display": "eyebrow", "content": "Section 04" },
+        "title": { "type": "text", "display": "heading", "content": "2026 Outlook" },
+        "description": { "type": "text", "display": "subheading", "content": "Strategy, targets, and open questions" }
+      }
+    },
+    {
+      "templateId": "single-column",
+      "transition": { "type": "fade", "duration": 600 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "One clear thesis for the year. Read it out loud, pause, then move on.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "body": { "preset": "fade-in", "delay": 300 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Our North Star" },
+        "body": { "type": "text", "display": "body", "content": "By the end of 2026, Decko is the default presentation layer for every high-growth B2B team — the tool they use to think, communicate, and sell. Everything we ship this year is in service of that outcome." }
+      }
+    },
+    {
+      "templateId": "header-body",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "The full roadmap in one slide. Q1 is hardest — that's enterprise infra. Q2-Q4 build on it. If enterprise slips, everything else moves.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "subtitle": { "preset": "fade-in", "delay": 150 },
+        "body": { "preset": "slide-from-bottom", "delay": 300 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "2026 Platform Roadmap" },
+        "subtitle": { "type": "text", "display": "eyebrow", "content": "Four quarters · Three pillars · One direction" },
+        "body": {
+          "type": "list",
+          "display": "steps",
+          "items": [
+            { "text": "Q1 — Enterprise infra: SSO, audit logs, SOC 2 Type II, custom contracts" },
+            { "text": "Q2 — AI platform: Decko Assist as standalone tier, API public beta" },
+            { "text": "Q3 — International: EMEA GTM, DE/FR/ES localisation, GDPR data residency" },
+            { "text": "Q4 — Scale: 100-seat+ accounts, advanced analytics, partner integrations" }
+          ]
+        }
+      }
+    },
+    {
+      "templateId": "chart-callout",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Our 2026 plan assumes 2.4× revenue growth. Conservative case gets us to $9M ARR, base case $12M, stretch $15M. Enterprise motion is the key variable.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "chart": { "preset": "fade-in", "delay": 200 },
+        "callout": { "preset": "slide-from-right", "delay": 400 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "2026 Revenue Scenarios" },
+        "chart": {
+          "type": "chart",
+          "chartType": "bar",
+          "display": "filled",
+          "title": "ARR Scenarios ($M)",
+          "data": {
+            "labels": ["2024 Actual", "2025 Actual", "2026 Conservative", "2026 Base", "2026 Stretch"],
+            "datasets": [
+              { "label": "ARR ($M)", "values": [3.1, 5.2, 9.0, 12.0, 15.0], "color": "#e8f400" }
+            ]
+          }
+        },
+        "callout": {
+          "type": "callout",
+          "display": "info",
+          "title": "Key Assumption",
+          "body": "Enterprise ACV expansion from $18K to $32K average, driven by AI Assist upsell and seat-based pricing rollout in Q2."
+        }
+      }
+    },
+    {
+      "templateId": "bullets-media",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Three strategic bets for the year. Keep it tight — one sentence per bet, then open to questions.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "bullets": { "preset": "slide-from-bottom", "delay": 200 },
+        "media": { "preset": "fade-in", "delay": 100 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Three Bets for 2026" },
+        "bullets": {
+          "type": "list",
+          "display": "steps",
+          "items": [
+            { "text": "Enterprise motion — dedicated AE pod, custom contracts, SOC 2 Type II by Q2" },
+            { "text": "AI platform — Decko Assist becomes a standalone product tier, not just a feature" },
+            { "text": "International — EMEA sales hire in Q1, localisation for DE, FR, and ES by Q3" }
+          ]
+        },
+        "media": {
+          "type": "media",
+          "display": "image",
+          "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+          "alt": "Team collaboration"
+        }
+      }
+    },
+    {
+      "templateId": "code-walkthrough",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Quick API preview — for technical attendees. The three lines that matter: init, render, export. Show it's a 5-minute integration.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "code": { "preset": "fade-in", "delay": 200 },
+        "annotation": { "preset": "slide-from-right", "delay": 400 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Decko API — Quick Start" },
+        "code": {
+          "type": "code",
+          "language": "typescript",
+          "display": "block",
+          "filename": "generate-deck.ts",
+          "code": "import { Decko } from '@decko/sdk'\n\nconst deck = await Decko.init({\n  theme: 'nova',\n  data: './q4-review.json',\n})\n\n// Render to HTML with all animations\nawait deck.render({\n  output: 'dist/deck.html',\n  embedAssets: true,\n})\n\n// Export to PDF for sharing\nawait deck.export({\n  format: 'pdf',\n  output: 'dist/deck.pdf',\n})"
+        },
+        "annotation": {
+          "type": "callout",
+          "display": "info",
+          "title": "Public Beta — Q2 2026",
+          "body": "Full SDK with TypeScript types, React component bindings, and CI/CD integrations. Early access available now."
+        }
+      }
+    },
+    {
+      "templateId": "architecture-diagram",
+      "transition": { "type": "fade", "duration": 600 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "High-level platform architecture. Three layers: data input, processing engine, output targets. Point out the plugin system on the right — that's what enables the partner integrations in Q4.",
+      "animations": {
+        "title": { "preset": "slide-from-left", "delay": 0 },
+        "diagram": { "preset": "fade-in", "delay": 200 },
+        "notes": { "preset": "slide-from-bottom", "delay": 400 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "heading", "content": "Platform Architecture" },
+        "diagram": {
+          "type": "media",
+          "display": "image",
+          "src": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80",
+          "alt": "Platform architecture diagram"
+        },
+        "notes": {
+          "type": "list",
+          "display": "bullets",
+          "items": [
+            { "text": "Renderer is theme-agnostic — swap themes without touching content" },
+            { "text": "Plugin system enables custom block types and output targets" },
+            { "text": "All processing runs locally — no data leaves your machine" }
+          ]
+        }
+      }
+    },
+    {
+      "templateId": "terminal",
+      "transition": { "type": "wipe", "direction": "left" },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Deploy in 60 seconds. This is the pitch for self-serve — show the three commands, that's it.",
+      "animations": {
+        "title": { "preset": "fade-in", "delay": 0 },
+        "code": { "preset": "fade-in", "delay": 200 }
+      },
+      "slots": {
+        "title": { "type": "text", "display": "eyebrow", "content": "Ship in 60 seconds" },
+        "code": {
+          "type": "code",
+          "language": "bash",
+          "display": "terminal",
+          "code": "$ npx decko init --theme nova\n✓ Created deck.json (nova theme · 20 slides)\n\n$ npx decko render deck.json --watch\n✓ Rendered 20 slides → dist/deck.html\n  Watching for changes...\n\n$ npx decko export deck.json --pdf --share\n✓ Exported → dist/deck.pdf  (2.3 MB)\n✓ Share link → https://deck.app/s/q4-review-2025"
+        }
+      }
+    },
+    {
+      "templateId": "closing",
+      "transition": { "type": "fade", "duration": 1000 },
+      "background": { "type": "color", "value": "#0d0d0d" },
+      "notes": "Thank the team — this was a massive year. Open floor for questions. Stay for 10 mins after if anyone wants to dig deeper into any section.",
+      "animations": {
+        "headline": { "preset": "blast-from-z", "delay": 0 },
+        "cta": { "preset": "slide-from-bottom", "delay": 300 },
+        "contact": { "preset": "fade-in", "delay": 600 }
+      },
+      "slots": {
+        "headline": { "type": "text", "display": "heading", "content": "Thank You" },
+        "cta": { "type": "text", "display": "subheading", "content": "Questions, challenges, or bets you'd make differently?" },
+        "contact": { "type": "text", "display": "caption", "content": "hello@decko.app · github.com/decko · @deckoapp" }
+      }
+    }
+  ]
+}

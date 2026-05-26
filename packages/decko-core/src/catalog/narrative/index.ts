@@ -1,0 +1,5 @@
+export { titleSlide } from './title-slide.js'
+export { sectionBreak } from './section-break.js'
+export { agenda } from './agenda.js'
+export { closing } from './closing.js'
+export { quote } from './quote.js'

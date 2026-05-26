@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap');
+
+:root {
+  --decko-color-accent:      #e8f400;
+  --decko-color-background:  #0d0d0d;
+  --decko-color-surface:     #1a1a1a;
+  --decko-color-text:        #f0ece4;
+  --decko-color-text-muted:  rgba(240, 236, 228, 0.38);
+  --decko-font-display:      'Bebas Neue', Impact, sans-serif;
+  --decko-font-body:         'Syne', system-ui, sans-serif;
+  --decko-font-mono:         'DM Mono', 'Courier New', monospace;
+  --decko-spacing-slide:     3.5rem;
+  --decko-radius-card:       0px;
+  --decko-motion-intensity:  expressive;
+}

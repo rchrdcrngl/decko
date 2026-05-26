@@ -1,0 +1,176 @@
+{
+  "version": "1",
+  "meta": {
+    "title": "My Deck",
+    "author": "",
+    "aspectRatio": "16:9"
+  },
+  "theme": {
+    "name": "kinetic"
+  },
+  "slides": [
+    {
+      "templateId": "kinetic-hero",
+      "transition": { "type": "fade", "duration": 600 },
+      "slotStyles": {
+        "ghost-bg": { "position": "absolute", "top": "50%", "left": "50%" },
+        "word-top": { "position": "absolute", "top": "18%", "left": "5%" },
+        "label-top": { "position": "absolute", "top": "14%", "right": "6%" },
+        "word-mid": { "position": "absolute", "top": "38%", "left": "48%" },
+        "label-bottom": { "position": "absolute", "bottom": "30%", "right": "8%" },
+        "word-bottom": { "position": "absolute", "bottom": "12%", "left": "3%" },
+        "tagline": { "position": "absolute", "bottom": "4%", "right": "5%" }
+      },
+      "slots": {
+        "ghost-bg": {
+          "type": "text-kinetic",
+          "content": "MOTION",
+          "ghost": true,
+          "fontSize": "clamp(180px,28vw,420px)"
+        },
+        "word-top": {
+          "type": "text-kinetic",
+          "content": "FEEL",
+          "fontSize": "clamp(80px,14vw,200px)",
+          "animation": { "preset": "blast-from-z", "delay": 80 }
+        },
+        "label-top": {
+          "type": "text",
+          "display": "eyebrow",
+          "content": "EST. 2026",
+          "animation": { "preset": "slide-from-right", "delay": 300 }
+        },
+        "word-mid": {
+          "type": "text-kinetic",
+          "content": "THE",
+          "fontSize": "clamp(100px,18vw,260px)",
+          "animation": { "preset": "elastic-up", "delay": 500 }
+        },
+        "word-bottom": {
+          "type": "text-kinetic",
+          "content": "FUTURE",
+          "color": "#e8ff00",
+          "fontSize": "clamp(90px,15vw,220px)",
+          "animation": { "preset": "elastic-up", "delay": 1100 }
+        },
+        "label-bottom": {
+          "type": "text",
+          "display": "eyebrow",
+          "content": "A new era begins",
+          "animation": { "preset": "fade-in", "delay": 900 }
+        },
+        "tagline": {
+          "type": "text",
+          "display": "caption",
+          "content": "Kinetic · Spatial · Alive",
+          "animation": { "preset": "fade-in", "delay": 1600 }
+        }
+      }
+    },
+    {
+      "templateId": "kinetic-canvas",
+      "transition": { "type": "pan", "direction": "left" },
+      "background": { "type": "color", "value": "#f0ebe3" },
+      "slotStyles": {
+        "word-1": { "position": "absolute", "top": "5%", "left": "8%" },
+        "word-2": { "position": "absolute", "top": "42%", "left": "12%" },
+        "word-3": { "position": "absolute", "top": "28%", "right": "5%" },
+        "word-4": { "position": "absolute", "bottom": "5%", "left": "8%" },
+        "accent": { "position": "absolute", "top": "48%", "right": "18%" },
+        "caption": { "position": "absolute", "bottom": "8%", "right": "6%" }
+      },
+      "slots": {
+        "word-1": {
+          "type": "text-kinetic",
+          "content": "DESIGN",
+          "color": "#1a1a1a",
+          "fontSize": "clamp(90px,16vw,240px)",
+          "animation": { "preset": "skew-in-left", "delay": 0 }
+        },
+        "word-2": {
+          "type": "text-kinetic",
+          "content": "is how you",
+          "color": "#1a1a1a",
+          "fontSize": "clamp(18px,3vw,44px)",
+          "letterSpacing": "0.25em",
+          "animation": { "preset": "scale-up", "delay": 450 }
+        },
+        "word-3": {
+          "type": "text-kinetic",
+          "content": "CHANGE",
+          "color": "#1a1a1a",
+          "fontSize": "clamp(80px,14vw,210px)",
+          "animation": { "preset": "skew-in-right", "delay": 700 }
+        },
+        "word-4": {
+          "type": "text-kinetic",
+          "content": "THE WORLD",
+          "color": "#1a1a1a",
+          "fontSize": "clamp(50px,9vw,140px)",
+          "animation": { "preset": "slide-from-bottom", "delay": 1050 }
+        },
+        "accent": {
+          "type": "divider",
+          "animation": { "preset": "pop", "delay": 900 }
+        },
+        "caption": {
+          "type": "text",
+          "display": "caption",
+          "content": "© 2026 — All Rights Reserved",
+          "animation": { "preset": "fade-in", "delay": 1500 }
+        }
+      }
+    },
+    {
+      "templateId": "kinetic-canvas",
+      "transition": { "type": "fade", "duration": 400 },
+      "slotStyles": {
+        "word-1": { "position": "absolute", "top": "25%", "left": "5%" },
+        "caption": { "position": "absolute", "bottom": "12%", "left": "5%" }
+      },
+      "slots": {
+        "word-1": {
+          "type": "text-kinetic",
+          "content": "IMAGINE",
+          "fontSize": "clamp(80px,18vw,260px)",
+          "animation": { "target": "chars", "scatter": true, "stagger": 60, "delay": 50 }
+        },
+        "caption": {
+          "type": "text",
+          "display": "eyebrow",
+          "content": "NO LIMITS · NO BOUNDARIES · NO COMPROMISE",
+          "animation": { "preset": "slide-from-bottom", "delay": 1400 }
+        }
+      }
+    },
+    {
+      "templateId": "kinetic-canvas",
+      "transition": { "type": "fade", "duration": 1000 },
+      "slotStyles": {
+        "bg": { "position": "absolute", "bottom": "-8%", "left": "5%" },
+        "word-1": { "position": "absolute", "top": "28%", "left": "5%" },
+        "caption": { "position": "absolute", "bottom": "18%", "left": "5%" }
+      },
+      "slots": {
+        "bg": {
+          "type": "text-kinetic",
+          "content": "2026",
+          "ghost": true,
+          "fontSize": "clamp(200px,35vw,520px)"
+        },
+        "word-1": {
+          "type": "text-kinetic",
+          "content": "LIMITLESS",
+          "fontSize": "clamp(80px,16vw,240px)",
+          "animation": { "target": "chars", "preset": "letter-crash-in", "stagger": 80, "delay": 200 }
+        },
+        "caption": {
+          "type": "text",
+          "display": "subheading",
+          "content": "Imagination · Motion · Space",
+          "animation": { "preset": "slide-from-bottom", "delay": 1200 }
+        }
+      }
+    }
+  ]
+}

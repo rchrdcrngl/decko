@@ -1,0 +1,47 @@
+name: Schema proposal
+description: Propose a new block type, template, or schema change
+labels: ["type: schema-change"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Schema changes are breaking changes. Please read `SCHEMA.md` and
+        `CONTRIBUTING.md` before proposing.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Proposal type
+      options:
+        - New block type (x-*)
+        - New built-in block type
+        - New template
+        - Modify existing block type
+        - Modify existing template
+        - New schema field (non-breaking)
+        - Breaking schema change
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: What can't you express with the current schema?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed schema / TypeScript type
+      render: typescript
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: JSON examples
+      description: One or two realistic examples of the new schema in use.
+      render: json

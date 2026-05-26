@@ -1,0 +1,434 @@
+/* ── Loading state ────────────────────────────── */
+@keyframes decko-loading-pulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(0.75); }
+  50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1); }
+}
+
+#decko-root:not(:has(.decko-slide--active))::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.75);
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: var(--decko-color-accent, #818cf8);
+  z-index: 999;
+  animation: decko-loading-pulse 1s ease-in-out infinite;
+}
+
+/* ── Reset ────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Body / deck root ─────────────────────────── */
+body {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: var(--decko-font-body, system-ui, sans-serif);
+}
+
+#decko-root {
+  position: relative;
+  width: 100vw;
+  aspect-ratio: 16 / 9;
+  max-height: 100vh;
+  max-width: calc(100vh * 16 / 9);
+  overflow: hidden;
+  background: var(--decko-color-background, #0f0f1a);
+  color: var(--decko-color-text, #f8f8f2);
+}
+
+#decko-root[data-aspect-ratio="4:3"] {
+  aspect-ratio: 4 / 3;
+  max-width: calc(100vh * 4 / 3);
+}
+
+/* ── Slide ────────────────────────────────────── */
+.decko-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--decko-spacing-slide, 3rem);
+  background: var(--decko-color-background, #0f0f1a);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.decko-slide--active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ── Transitions ──────────────────────────────── */
+@keyframes decko-fade-in  { from { opacity: 0 } to { opacity: 1 } }
+@keyframes decko-fade-out { from { opacity: 1 } to { opacity: 0 } }
+
+@keyframes decko-pan-in  {
+  from { transform: translate(var(--decko-pan-from-x, 100%), var(--decko-pan-from-y, 0%)) }
+  to   { transform: translate(0, 0) }
+}
+@keyframes decko-pan-out {
+  from { transform: translate(0, 0) }
+  to   { transform: translate(var(--decko-pan-to-x, -100%), var(--decko-pan-to-y, 0%)) }
+}
+
+@keyframes decko-wipe-in  {
+  from { clip-path: var(--decko-wipe-from, inset(0 100% 0 0)) }
+  to   { clip-path: inset(0 0 0 0) }
+}
+@keyframes decko-wipe-out {
+  from { clip-path: inset(0 0 0 0) }
+  to   { clip-path: var(--decko-wipe-to, inset(0 0 0 100%)) }
+}
+
+@keyframes decko-zoom-in  { from { transform: scale(0.85); opacity: 0 } to { transform: scale(1);    opacity: 1 } }
+@keyframes decko-zoom-out { from { transform: scale(1);    opacity: 1 } to { transform: scale(1.15); opacity: 0 } }
+
+@keyframes decko-morph-in  { from { transform: scale(0.95) translateY(1rem); opacity: 0 } to { transform: none; opacity: 1 } }
+@keyframes decko-morph-out { from { transform: none; opacity: 1 } to { transform: scale(1.05) translateY(-1rem); opacity: 0 } }
+
+@keyframes decko-particle-burst {
+  0%   { filter: blur(0)    brightness(1); opacity: 1 }
+  50%  { filter: blur(8px)  brightness(2); opacity: 0.6 }
+  100% { filter: blur(16px) brightness(0); opacity: 0 }
+}
+
+.decko-transition--fade        { animation: decko-fade-in  var(--decko-transition-duration, 400ms) ease both; }
+.decko-transition--fade-out    { animation: decko-fade-out var(--decko-transition-duration, 400ms) ease both; }
+
+.decko-transition--pan-in      { animation: decko-pan-in  var(--decko-transition-duration, 400ms) cubic-bezier(0.4,0,0.2,1) both; }
+.decko-transition--pan-out     { animation: decko-pan-out var(--decko-transition-duration, 400ms) cubic-bezier(0.4,0,0.2,1) both; }
+
+.decko-transition--wipe-in     { animation: decko-wipe-in  var(--decko-transition-duration, 400ms) ease both; }
+.decko-transition--wipe-out    { animation: decko-wipe-out var(--decko-transition-duration, 400ms) ease both; }
+
+.decko-transition--zoom-in     { animation: decko-zoom-in  var(--decko-transition-duration, 400ms) ease both; }
+.decko-transition--scale-down  { animation: decko-zoom-out var(--decko-transition-duration, 400ms) ease both; }
+
+.decko-transition--morph-in    { animation: decko-morph-in  var(--decko-transition-duration, 400ms) ease both; }
+.decko-transition--morph-out   { animation: decko-morph-out var(--decko-transition-duration, 400ms) ease both; }
+
+.decko-transition--particle-burst { animation: decko-particle-burst var(--decko-transition-duration, 500ms) ease both; }
+
+/* ── Slot ─────────────────────────────────────── */
+.decko-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@keyframes decko-slot-enter {
+  from { opacity: 0; transform: translateY(1rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.decko-slot--enter {
+  animation: decko-slot-enter var(--decko-slot-enter-duration, 350ms)
+             cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ── Text ─────────────────────────────────────── */
+.decko-text {
+  font-family: var(--decko-font-body, system-ui, sans-serif);
+  color: var(--decko-color-text, #f8f8f2);
+  line-height: 1.5;
+}
+
+.decko-text--heading {
+  font-family: var(--decko-font-display, sans-serif);
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.decko-text--hero {
+  font-family: var(--decko-font-display, sans-serif);
+  font-size: clamp(3.25rem, 8.5vw, 5.75rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.decko-text--subheading {
+  font-family: var(--decko-font-body, system-ui, sans-serif);
+  font-size: clamp(1.125rem, 2.25vw, 1.5rem);
+  font-weight: 400;
+  color: var(--decko-color-text-muted, #6e6e8e);
+  line-height: 1.55;
+}
+
+.decko-text--eyebrow {
+  font-family: var(--decko-font-body, system-ui, sans-serif);
+  font-size: clamp(0.7rem, 1.1vw, 0.8125rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--decko-color-accent, #818cf8);
+}
+
+.decko-text--label {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-weight: 500;
+  color: var(--decko-color-text-muted, #6e6e8e);
+}
+
+.decko-text--caption {
+  font-size: clamp(0.75rem, 1.2vw, 0.875rem);
+  color: var(--decko-color-text-muted, #6e6e8e);
+}
+
+.decko-text--body {
+  font-size: clamp(1rem, 1.85vw, 1.1875rem);
+  line-height: 1.7;
+}
+
+.decko-text--quote {
+  font-size: clamp(1.375rem, 2.75vw, 1.875rem);
+  font-style: italic;
+  border-left: 3px solid var(--decko-color-accent, #818cf8);
+  padding-left: 1.5rem;
+  color: var(--decko-color-text-muted, #6e6e8e);
+  line-height: 1.6;
+}
+
+/* ── List ─────────────────────────────────────── */
+.decko-list {
+  font-size: clamp(1rem, 1.85vw, 1.1875rem);
+  line-height: 1.65;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.decko-list--bullets   { list-style: disc; }
+.decko-list--numbered  { list-style: decimal; }
+.decko-list--steps     { list-style: decimal; }
+.decko-list--checklist { list-style: none; padding-left: 0; }
+
+.decko-list__icon   { margin-right: 0.5rem; }
+.decko-list__nested { margin-top: 0.25rem; padding-left: 1.25rem; list-style: circle; }
+
+/* ── Code ─────────────────────────────────────── */
+.decko-code {
+  font-family: var(--decko-font-mono, monospace);
+  font-size: clamp(0.7rem, 1.35vw, 0.9375rem);
+  background: var(--decko-color-surface, #1a1a2e);
+  border-radius: var(--decko-radius-card, 0.75rem);
+  padding: 1.375rem 1.5rem;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--decko-color-text, #f8f8f2);
+  line-height: 1.65;
+}
+
+.decko-code--inline {
+  display: inline;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+/* ── Table ────────────────────────────────────── */
+.decko-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+.decko-table th,
+.decko-table td { padding: 0.625rem 1rem; text-align: left; }
+
+.decko-table th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--decko-color-accent, #818cf8);
+  color: var(--decko-color-text, #f8f8f2);
+}
+
+.decko-table td {
+  border-bottom: 1px solid var(--decko-color-surface, #1a1a2e);
+  color: var(--decko-color-text, #f8f8f2);
+}
+
+.decko-table--compact th,
+.decko-table--compact td { padding: 0.375rem 0.75rem; }
+
+.decko-table--bordered th,
+.decko-table--bordered td { border: 1px solid var(--decko-color-surface, #1a1a2e); }
+
+/* ── Metric ───────────────────────────────────── */
+.decko-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.75rem 2rem;
+  background: var(--decko-color-surface, #1a1a2e);
+  border: 1px solid var(--decko-color-accent, #818cf8);
+  border-radius: var(--decko-radius-card, 0.75rem);
+}
+
+.decko-metric__value {
+  font-family: var(--decko-font-display, sans-serif);
+  font-size: clamp(2.75rem, 6.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--decko-color-accent, #818cf8);
+  letter-spacing: -0.02em;
+}
+
+.decko-metric__label {
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  color: var(--decko-color-text-muted, #6e6e8e);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.25rem;
+}
+
+.decko-metric__delta { font-size: clamp(0.75rem, 1.5vw, 1rem); font-weight: 600; }
+
+.trend--up   .decko-metric__delta { color: #22c55e; }
+.trend--down .decko-metric__delta { color: #ef4444; }
+.trend--flat .decko-metric__delta { color: var(--decko-color-text-muted, #6e6e8e); }
+
+/* ── Callout ──────────────────────────────────── */
+.decko-callout {
+  border-radius: var(--decko-radius-card, 0.75rem);
+  padding: 1.25rem 1.375rem;
+  border: 1px solid var(--decko-color-surface, #1a1a2e);
+  border-top: 2px solid currentColor;
+  background: var(--decko-color-surface, #1a1a2e);
+}
+
+.decko-callout--neutral { color: var(--decko-color-text-muted, #6e6e8e); }
+.decko-callout--info    { color: #60a5fa; }
+.decko-callout--success { color: #22c55e; }
+.decko-callout--warning { color: #f59e0b; }
+.decko-callout--danger  { color: #ef4444; }
+
+.decko-callout__title {
+  font-family: var(--decko-font-display, sans-serif);
+  font-weight: 700;
+  font-size: clamp(0.875rem, 1.8vw, 1.125rem);
+  margin-bottom: 0.625rem;
+  letter-spacing: -0.01em;
+}
+
+.decko-callout__body {
+  font-size: clamp(0.75rem, 1.4vw, 0.9375rem);
+  color: var(--decko-color-text, #f8f8f2);
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* ── Media ────────────────────────────────────── */
+.decko-media { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.decko-media__img,
+.decko-media__video {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--decko-radius-card, 0.75rem);
+  display: block;
+}
+
+.decko-media__caption {
+  font-size: clamp(0.65rem, 1.2vw, 0.875rem);
+  color: var(--decko-color-text-muted, #6e6e8e);
+  text-align: center;
+}
+
+/* ── Divider ──────────────────────────────────── */
+.decko-divider {
+  border: none;
+  border-top: 1px solid var(--decko-color-surface, #1a1a2e);
+  margin: 0.5rem 0;
+}
+
+/* ── Group ────────────────────────────────────── */
+.decko-group { display: flex; gap: 1.5rem; }
+
+/* ── Chart ────────────────────────────────────── */
+.decko-chart { width: 100%; max-height: 40vh; }
+.decko-chart canvas { max-width: 100%; max-height: 100%; }
+
+/* ── Custom block ─────────────────────────────── */
+.decko-block--custom { min-height: 2rem; }
+
+/* ── Nav ──────────────────────────────────────── */
+#decko-nav {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(7, 7, 26, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(129, 140, 248, 0.15);
+  border-radius: 2rem;
+  padding: 0.4rem 0.875rem;
+  z-index: 100;
+}
+
+#decko-nav button {
+  background: none;
+  border: none;
+  color: var(--decko-color-text, #f8f8f2);
+  font-size: 1.125rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.5rem;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+#decko-nav button:hover {
+  background: rgba(129, 140, 248, 0.12);
+}
+
+#decko-nav button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+#decko-counter {
+  font-size: 0.8rem;
+  color: var(--decko-color-text-muted, #6e6e8e);
+  min-width: 4ch;
+  text-align: center;
+  font-family: var(--decko-font-mono, monospace);
+}
+
+/* ── Ambient ──────────────────────────────────── */
+@keyframes decko-ambient-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+.decko-ambient--gradient-shift {
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    135deg,
+    var(--decko-color-background, #0f0f1a) 0%,
+    var(--decko-color-surface, #1a1a2e)    30%,
+    color-mix(in srgb, var(--decko-color-accent, #f97316) 30%, var(--decko-color-background, #0f0f1a)) 60%,
+    var(--decko-color-background, #0f0f1a) 100%
+  );
+}
+
+.decko-ambient--gradient-shift[data-ambient-active="low"]    { animation: decko-ambient-gradient-shift 12s ease infinite; }
+.decko-ambient--gradient-shift[data-ambient-active="medium"] { animation: decko-ambient-gradient-shift 8s ease infinite; }
+.decko-ambient--gradient-shift[data-ambient-active="high"]   { animation: decko-ambient-gradient-shift 4s ease infinite; }
