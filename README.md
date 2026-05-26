@@ -30,8 +30,8 @@ No build step. Drop JSON into HTML, include two files.
 <html>
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://unpkg.com/decko@latest/dist/css/decko-base.css" />
-  <link rel="stylesheet" href="https://unpkg.com/decko@latest/dist/css/decko-theme-midnight.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@deckohq/decko@latest/dist/css/decko-base.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@deckohq/decko@latest/dist/css/decko-theme-midnight.css" />
 </head>
 <body>
   <script type="application/json" id="deck">
@@ -61,7 +61,7 @@ No build step. Drop JSON into HTML, include two files.
       ]
     }
   </script>
-  <script src="https://unpkg.com/decko@latest/dist/browser/index.global.js"></script>
+  <script src="https://unpkg.com/@deckohq/decko@latest/dist/browser/index.global.js"></script>
 </body>
 </html>
 ```
